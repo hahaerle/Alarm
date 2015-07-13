@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/lenote/alarmstar/MyApplication.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/lenote/alarmstar/activity/BaseActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/lenote/alarmstar/activity/SetupActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/lenote/alarmstar/dao/AlarmDao.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/lenote/alarmstar/dao/BaseDao.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/lenote/alarmstar/dao/DataBaseHelper.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/lenote/alarmstar/services/WorkService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/lenote/alarmstar/session/AlarmSession.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/lenote/alarmstar/tools/MyAlarmManager.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/lenote/alarmstar/tools/Strings.java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>
