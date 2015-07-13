@@ -33,6 +33,16 @@ public class MyAlarmManager {
     public static final int Saturday=7;//    星期六
 
     /**
+     * cancel(PendingIntent operation)方法将会取消Intent匹配的任何闹钟。
+     * 关于Intent的匹配，查看filterEquals(Intent other)方法的说明可知，
+     * 两个Intent从intent resolution(filtering)(Intent决议或过滤)的角度来看是一致的，即认为两个Intent相等。
+     * 即是说，Intent的action,data,type,class,categories是相同的，其他的数据都不在比较范围之内。
+     * @param session
+     */
+    public static void cancel(AlarmSession session){
+
+    }
+    /**
      * 工作日
      * @param hour
      * @param minute
