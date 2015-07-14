@@ -9,7 +9,7 @@ import org.androidannotations.annotations.EIntentService;
 import org.androidannotations.annotations.ServiceAction;
 
 /**
- * Created by shanerle on 2015/7/13.
+ * Created by lenote on 2015/7/13.
  */
 @EIntentService
 public class WorkService extends IntentService {

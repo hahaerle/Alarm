@@ -9,7 +9,7 @@ import com.lenote.alarmstar.tools.Strings;
 import java.util.Locale;
 
 /**
- * Created by shanerle on 2015/7/13.
+ * Created by lenote on 2015/7/13.
  */
 public class BaseDao {
     protected static int getColumnIndex(Cursor cursor, String columnName) {

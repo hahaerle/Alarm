@@ -6,7 +6,7 @@ apt {
         androidManifestFile variant.outputs[0].processResources.manifestFile
         // if you have multiple outputs (when using splits), you may want to have other index than 0
 
-        resourcePackageName 'om.lenote.alarmstar'
+        resourcePackageName 'com.lenote.alarmstar'
 
         // If you're using Android NBS flavors you should use the following line instead of hard-coded packageName
         // resourcePackageName android.defaultConfig.packageName

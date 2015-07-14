@@ -12,7 +12,7 @@ import java.util.TimeZone;
 import hirondelle.date4j.DateTime;
 
 /**
- * Created by shanerle on 2015/7/13.
+ * Created by lenote on 2015/7/13.
  */
 
 /**

@@ -1,7 +1,7 @@
 package com.lenote.alarmstar.tools;
 
 /**
- * Created by shanerle on 2015/7/13.
+ * Created by lenote on 2015/7/13.
  */
 public class Strings {
     public static boolean isNullOrEmpty(String string) {
