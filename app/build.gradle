@@ -40,6 +40,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:22.2.0'
     apt "org.androidannotations:androidannotations:$AAVersion"
     compile "org.androidannotations:androidannotations-api:$AAVersion"
-    compile "com.darwinsys:hirondelle-date4j:1.5.1"
-
+    compile 'com.darwinsys:hirondelle-date4j:1.5.1'
+    compile project(':pickview')
 }
