@@ -1,4 +1,4 @@
-package lenote.com.picturecompare;
+package com.lenote.alarmstar.tools;
 
 import android.app.Activity;
 import android.app.Fragment;

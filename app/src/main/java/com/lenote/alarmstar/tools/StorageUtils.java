@@ -1,4 +1,4 @@
-package lenote.com.picturecompare;
+package com.lenote.alarmstar.tools;
 
 import android.content.Context;
 import android.os.Environment;

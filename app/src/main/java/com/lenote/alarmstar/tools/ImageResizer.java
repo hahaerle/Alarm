@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package lenote.com.picturecompare;
+package com.lenote.alarmstar.tools;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -23,6 +23,8 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.util.Log;
+
+import com.lenote.alarmstar.BuildConfig;
 
 import java.io.FileDescriptor;
 
