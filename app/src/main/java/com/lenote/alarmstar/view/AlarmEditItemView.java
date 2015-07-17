@@ -53,8 +53,14 @@ public class AlarmEditItemView extends LinearLayout {
         try {
             boolean clickable = a.getBoolean(R.styleable.EditItem_item_clickable, true);
             setClickable(clickable);
-            itemName = a.getString(R.styleable.EditItem_item_name);
-            itemValue = a.getString(R.styleable.EditItem_item_value);
+            if(a.hasValue(R.styleable.EditItem_item_name)) {
+                itemName = a.getString(R.styleable.EditItem_item_name);
+                setName(itemName);
+            }
+            if(a.hasValue(R.styleable.EditItem_item_value)) {
+                itemValue = a.getString(R.styleable.EditItem_item_value);
+                setValue(itemValue);
+            }
         } finally {
             a.recycle();
         }

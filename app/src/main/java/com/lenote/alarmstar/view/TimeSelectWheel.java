@@ -36,7 +36,6 @@ public class TimeSelectWheel extends LinearLayout {
 
     public interface TimeWheelListener {
         void onDateTimeSelected(long timeStamp);
-        void onCancel();
     }
 
     public static final int TYPE_ALL = 0;
@@ -268,13 +267,6 @@ public class TimeSelectWheel extends LinearLayout {
         wheelView.setDrawShadows(false);
         wheelView.setWheelBackground(R.color.transparent);
 //        wheelView.setWheelForeground(R.drawable.time_wheel_fg);
-    }
-
-    void cancel() {
-        if (listener == null) {
-            return;
-        }
-        listener.onCancel();
     }
 
     void ok() {

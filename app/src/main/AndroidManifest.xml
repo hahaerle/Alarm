@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.lenote.alarmstar" >
-
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
     <uses-permission android:name="ANDROID.PERMISSION.VIBRATE"/>
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
     <application
@@ -9,6 +11,8 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        <meta-data android:value="55a8a7a567e58e130b0027f1" android:name="UMENG_APPKEY"/>
+        <meta-data android:value="umeng" android:name="UMENG_CHANNEL"/>
         <activity
             android:name=".activity.SetupActivity"
             android:label="@string/app_name" >
@@ -21,6 +25,14 @@
         <activity android:name=".activity.MainActivity_"/>
         <activity android:name=".activity.AlarmEditActivity_"/>
         <service android:name=".services.WorkService_"/>
+        <service
+            android:name="com.umeng.update.net.DownloadingService"
+            android:process=":DownloadingService" >
+        </service>
+        <activity
+            android:name="com.umeng.update.UpdateDialogActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
         <receiver android:name=".receiver.AlarmStarReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
