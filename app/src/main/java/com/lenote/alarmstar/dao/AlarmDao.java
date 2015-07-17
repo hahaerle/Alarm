@@ -5,7 +5,11 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.lenote.alarmstar.session.AlarmObj;
+import com.lenote.alarmstar.activity.MainActivity;
+import com.lenote.alarmstar.moudle.AlarmObj;
+import com.lenote.alarmstar.session.AlarmSession;
+
+import java.util.List;
 
 /**
  * Created by lenote on 2015/7/13.
@@ -19,6 +23,7 @@ public class AlarmDao extends BaseDao {
 
     public static final String TABLE_NAME = "t_alarminfo";
     public static final String ID = "id";
+    public static final String ALARM_TIME="alarm_time";
     public static final String ALARM_TYPE = "type";
     public static final String WEEKS = "weeks";
     public static final String TYPE_NOCE_DATE = "type_noce_date";
@@ -28,7 +33,7 @@ public class AlarmDao extends BaseDao {
     public static final String REALARM_INTERVAL = "reAlarmInterval";  //
 
     private static final String[] COLUMNS = new String[]{
-            ID, ALARM_TYPE, WEEKS, TYPE_NOCE_DATE, RING_URI, ALARM_NAME, IS_NOTIFY, REALARM_INTERVAL
+            ID,ALARM_TIME, ALARM_TYPE, WEEKS, TYPE_NOCE_DATE, RING_URI, ALARM_NAME, IS_NOTIFY, REALARM_INTERVAL
     };
 
     /**
@@ -39,6 +44,7 @@ public class AlarmDao extends BaseDao {
     protected static void onCreateTable(SQLiteDatabase db) {
         String sql = "CREATE  TABLE IF NOT EXISTS " + TABLE_NAME + " (\n" +
                 "  " + ID + " INTEGER PRIMARY KEY AUTOINCREMENT ,\n" +
+                "  " + ALARM_TIME + " LONG ,\n" +
                 "  " + ALARM_TYPE + " INTEGER NULL ,\n" +
                 "  " + TYPE_NOCE_DATE + " LONG ,\n" +
                 "  " + REALARM_INTERVAL + " LONG ,\n" +
@@ -92,6 +98,15 @@ public class AlarmDao extends BaseDao {
         }
         return array;
     }
+
+    public static List<AlarmSession> getAlarmList(Context context) {
+        SQLiteDatabase db = DataBaseHelper.getReadableDatabase(context);
+        compatibleBeginTransaction(db);
+        db.setTransactionSuccessful();
+        db.endTransaction();
+        return null;
+    }
+
     public static class AlarmBuilder implements DataBaseBuilder<AlarmObj> {
 
         @Override
@@ -105,6 +120,7 @@ public class AlarmDao extends BaseDao {
             alarmObj.setRingUri(safeGetString(cursor, RING_URI, ""));
             alarmObj.setWeeks(stringToIntArray(safeGetString(cursor, WEEKS, "")));
             alarmObj.setType(safeGetInteger(cursor, ALARM_TYPE, 0));
+            alarmObj.setAlarmTime(safeGetLong(cursor, ALARM_TIME, 0));
             return alarmObj;
         }
 
@@ -119,6 +135,7 @@ public class AlarmDao extends BaseDao {
             values.put(ALARM_NAME, alarmObj.getAlarmName());
             values.put(IS_NOTIFY, alarmObj.isNotify());
             values.put(REALARM_INTERVAL,alarmObj.getReAlarmInterval());
+            values.put(ALARM_TIME,alarmObj.getAlarmTime());
             return values;
         }
     }

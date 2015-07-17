@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="EditItem">
+        <attr name="item_name" format="string" />
+        <attr name="item_value" format="string" />
+        <attr name="item_clickable" format="boolean" />
+    </declare-styleable>
+</resources>

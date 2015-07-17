@@ -3,4 +3,7 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="text_size_lv2">15sp</dimen>
+    <dimen name="text_size_alarmtime">24sp</dimen>
+    <dimen name="text_size_countdown">35sp</dimen>
+    <dimen name="text_size_lv1">17sp</dimen>
 </resources>

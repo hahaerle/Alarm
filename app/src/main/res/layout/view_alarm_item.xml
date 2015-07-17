@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:padding="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/alarmTime"
+            android:textSize="@dimen/text_size_alarmtime"
+            android:textColor="@color/text_color_white"
+            android:text="20:00"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/info"
+            android:textSize="@dimen/text_size_lv1"
+            android:textColor="@color/text_color_white"
+            android:text="午餐"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <CheckBox
+        android:id="@+id/chk_order_notify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/switch_on_off"
+        android:button="@null"
+        android:checked="true" />
+</LinearLayout>

@@ -1,4 +1,4 @@
-package com.lenote.alarmstar.session;
+package com.lenote.alarmstar.moudle;
 
 /**
  * Created by lenote on 2015/7/14.
@@ -12,6 +12,7 @@ public class AlarmObj {
     String alarmName;//闹钟名称
     boolean isNotify;
     long reAlarmInterval;//如果没有关闭闹钟，reAlarmInterval毫秒后重新提醒。
+    private long alarmTime;//起床闹钟和普通闹钟的响铃时间
 
     public int getId() {
         return id;
@@ -83,5 +84,14 @@ public class AlarmObj {
             info+=w+",";
         }
         return info.substring(0,info.length()-2);
+    }
+
+    public void setAlarmTime(long alarmTime) {
+        this.alarmTime = alarmTime;
+    }
+
+    public long getAlarmTime() {
+
+        return alarmTime;
     }
 }

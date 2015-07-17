@@ -19,6 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.MainActivity_"/>
+        <activity android:name=".activity.AlarmEditActivity_"/>
         <service android:name=".services.WorkService_"/>
         <receiver android:name=".receiver.AlarmStarReceiver">
             <intent-filter>

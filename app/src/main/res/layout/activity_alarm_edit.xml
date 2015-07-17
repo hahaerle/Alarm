@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.lenote.alarmstar.view.TimeSelectWheel_
+        android:id="@+id/wheelView"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"/>
+    <com.lenote.alarmstar.view.AlarmEditItemView_
+        app:item_name="响铃周期"
+        app:item_value="每天"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+    <com.lenote.alarmstar.view.AlarmEditItemView_
+        app:item_name="闹钟名称"
+        app:item_value="起床闹钟"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+    <com.lenote.alarmstar.view.AlarmEditItemView_
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+    <com.lenote.alarmstar.view.AlarmEditItemView_
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+    <com.lenote.alarmstar.view.AlarmEditItemView_
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
