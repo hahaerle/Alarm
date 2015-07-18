@@ -5,6 +5,10 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.view.View;
+import android.view.WindowManager;
+
+import com.lenote.alarmstar.tools.BackgroundHelper;
 
 /**
  * Created by lenote on 2015/7/13.
@@ -14,8 +18,15 @@ public class BaseActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setBackgroundDrawable(BackgroundHelper.getInstance().getBackground(this));
         initActionBar();
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
+
     protected void initActionBar() {
         ActionBar actionBar = getActionBar();
         if (actionBar == null) {

@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">AlarmStar</string>
+    <string name="app_name">闹钟之星</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="home_count_down">距离最近的%1$s还有</string>
 </resources>

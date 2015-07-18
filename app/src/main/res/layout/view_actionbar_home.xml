@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingBottom="10dp"
+    android:layout_height="wrap_content">
+<RelativeLayout
+    android:id="@+id/dateInfo"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/day"
+        android:text="03"
+        android:textSize="48sp"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/text_color_white"
+        android:layout_alignParentLeft="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/yearmonth"
+        android:layout_toRightOf="@id/day"
+        android:layout_marginTop="10dp"
+        android:textSize="14sp"
+        android:textColor="@color/text_color_white"
+        android:text="2015年2月 正月初十"
+        android:layout_alignParentTop="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/week"
+        android:textSize="18sp"
+        android:textColor="@color/text_color_white"
+        android:layout_alignLeft="@id/yearmonth"
+        android:text="星期一"
+        android:layout_below="@id/yearmonth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:paddingTop="13dp"
+        android:gravity="right"
+        android:layout_height="fill_parent">
+        <ImageView
+            android:id="@+id/menu_setting"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/icon_menu_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/menu_add"
+            android:src="@drawable/icon_menu_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

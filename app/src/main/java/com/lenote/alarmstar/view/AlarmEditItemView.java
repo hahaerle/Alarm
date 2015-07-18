@@ -5,11 +5,13 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.os.Build;
 import android.util.AttributeSet;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.lenote.alarmstar.R;
 
+import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EViewGroup;
 import org.androidannotations.annotations.ViewById;
 
@@ -24,9 +26,10 @@ public class AlarmEditItemView extends LinearLayout {
     @ViewById
     TextView value;
     @ViewById
-    TextView arrow;
+    ImageView arrow;
     private String itemValue;
     private String itemName;
+    private boolean clickable;
 
     public AlarmEditItemView(Context context) {
         super(context);
@@ -48,18 +51,21 @@ public class AlarmEditItemView extends LinearLayout {
         initAttr(context,attrs);
     }
 
+    @AfterViews
+    void init(){
+        setClickable(clickable);
+        setName(itemName);
+        setValue(itemValue);
+    }
     private void initAttr(Context context,AttributeSet attributeSet) {
         TypedArray a = context.obtainStyledAttributes(attributeSet, R.styleable.EditItem);
         try {
-            boolean clickable = a.getBoolean(R.styleable.EditItem_item_clickable, true);
-            setClickable(clickable);
+             clickable = a.getBoolean(R.styleable.EditItem_item_clickable, true);
             if(a.hasValue(R.styleable.EditItem_item_name)) {
                 itemName = a.getString(R.styleable.EditItem_item_name);
-                setName(itemName);
             }
             if(a.hasValue(R.styleable.EditItem_item_value)) {
                 itemValue = a.getString(R.styleable.EditItem_item_value);
-                setValue(itemValue);
             }
         } finally {
             a.recycle();

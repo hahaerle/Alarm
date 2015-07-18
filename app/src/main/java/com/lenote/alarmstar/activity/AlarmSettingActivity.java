@@ -3,21 +3,50 @@ package com.lenote.alarmstar.activity;
 import android.widget.Toast;
 
 import com.lenote.alarmstar.R;
+import com.lenote.alarmstar.view.LogoActionBar;
 import com.umeng.update.UmengUpdateAgent;
 import com.umeng.update.UmengUpdateListener;
 import com.umeng.update.UpdateResponse;
 
+import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.ViewById;
 
 /**
  * Created by shanerle on 2015/7/17.
  */
 @EActivity(R.layout.activity_alarm_setting)
 public class AlarmSettingActivity extends BaseActivity{
-    private boolean isClickUpdate=false;
 
     @Click
+    void sound(){
+
+    }
+    @Click
+    void shake(){
+
+    }
+    @Click
+    void about(){
+
+    }
+    @Click
+    void help(){
+
+    }
+    @Click
+    void other(){
+
+    }
+    @Click
+    void camera(){
+
+    }
+
+    private boolean isClickUpdate=false;
+
+
     void checkUpdate(){
         if (isClickUpdate) return;
         isClickUpdate = true;

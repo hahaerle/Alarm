@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
+    android:paddingTop="20dp"
+    android:divider="@drawable/divide_line"
+    android:showDividers="middle|end"
     android:layout_height="match_parent">
-
+    <com.lenote.alarmstar.view.LogoActionBar_
+        android:id="@+id/actionBar"
+        app:title_name="设置"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+    <com.lenote.alarmstar.view.SettingItemView_
+        android:id="@+id/sound"
+        app:setting_name="声音设置"
+        app:item_logo="@drawable/icon_set_sound"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+    <com.lenote.alarmstar.view.SettingItemView_
+        android:id="@+id/shake"
+        app:setting_name="摇晃力度"
+        app:item_logo="@drawable/icon_set_shake"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+    <com.lenote.alarmstar.view.SettingItemView_
+        android:id="@+id/camera"
+        app:setting_name="照片精度"
+        app:item_logo="@drawable/icon_set_camera"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+    <com.lenote.alarmstar.view.SettingItemView_
+        android:id="@+id/other"
+        app:setting_name="其他设置"
+        app:item_logo="@drawable/icon_set_other"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+    <com.lenote.alarmstar.view.SettingItemView_
+        android:id="@+id/help"
+        app:setting_name="用户帮助"
+        app:item_logo="@drawable/icon_set_help"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+    <com.lenote.alarmstar.view.SettingItemView_
+        android:id="@+id/about"
+        app:setting_name="关于闹钟"
+        app:item_logo="@drawable/icon_set_about"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
 </LinearLayout>

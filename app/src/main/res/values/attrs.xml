@@ -5,4 +5,12 @@
         <attr name="item_value" format="string" />
         <attr name="item_clickable" format="boolean" />
     </declare-styleable>
+    <declare-styleable name="ActionBar">
+        <attr name="title_name" format="string" />
+        <attr name="menu_name" format="string" />
+    </declare-styleable>
+    <declare-styleable name="SettingItem">
+        <attr name="item_logo" format="reference"/>
+        <attr name="setting_name" format="string" />
+    </declare-styleable>
 </resources>

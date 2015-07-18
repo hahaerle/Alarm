@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/create_menu_background"
+    android:padding="20dp"
+    android:layout_height="200dp">
+    <TextView
+        android:id="@+id/close_btn"
+        android:layout_alignParentRight="true"
+        android:layout_margin="5dp"
+        android:background="@drawable/icon_create_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_centerInParent="true"
+        android:layout_width="fill_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/create_wakeup"
+            android:layout_weight="1"
+            android:src="@drawable/icon_create_wakeup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/create_normal"
+            android:layout_weight="1"
+            android:src="@drawable/icon_create_normal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/create_count_down"
+            android:layout_weight="1"
+            android:src="@drawable/icon_create_count_down"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_below="@id/btn_layout"
+        android:layout_marginTop="15dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="起床闹钟"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:textColor="@color/text_color_lv1"
+            android:textSize="@dimen/text_size_lv2"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="普通闹钟"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:textColor="@color/text_color_lv1"
+            android:textSize="@dimen/text_size_lv2"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="倒计时"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:textColor="@color/text_color_lv1"
+            android:textSize="@dimen/text_size_lv2"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>

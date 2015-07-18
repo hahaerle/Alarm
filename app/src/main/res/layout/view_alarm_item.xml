@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
+    android:background="@color/alarm_item_backcolor"
     android:gravity="center"
     android:padding="15dp"
     android:layout_width="match_parent"
@@ -21,7 +22,7 @@
             android:id="@+id/info"
             android:textSize="@dimen/text_size_lv1"
             android:textColor="@color/text_color_white"
-            android:text="午餐"
+            android:text="午餐 . 12月25日"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </LinearLayout>

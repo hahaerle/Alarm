@@ -16,8 +16,6 @@
 
 package kankan.wheel.widget;
 
-import kankan.wheel.widget.WheelView;
-
 /**
  * Wheel clicked listener interface.
  * <p>The onItemClicked() method is called whenever a wheel item is clicked

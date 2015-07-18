@@ -16,8 +16,6 @@
 
 package kankan.wheel.widget;
 
-import kankan.wheel.widget.WheelView;
-
 /**
  * Wheel changed listener interface.
  * <p>The onChanged() method is called whenever current wheel positions is changed:

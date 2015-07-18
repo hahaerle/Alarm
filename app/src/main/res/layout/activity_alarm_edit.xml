@@ -1,38 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="match_parent"
+     android:layout_width="match_parent"
+    android:paddingTop="20dp"
+    android:scrollbars="none"
     android:layout_height="match_parent">
-    <com.lenote.alarmstar.view.TimeSelectWheel_
-        android:id="@+id/wheelView"
-        android:layout_width="fill_parent"
-        android:layout_height="200dp"/>
-    <com.lenote.alarmstar.view.AlarmEditItemView_
-        android:id="@+id/alarm_type"
-        app:item_name="响铃周期"
-        app:item_value="每天"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"/>
-    <com.lenote.alarmstar.view.AlarmEditItemView_
-        app:item_name="响铃日期"
-        android:id="@+id/alarm_once_date"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"/>
-    <com.lenote.alarmstar.view.AlarmEditItemView_
-        android:id="@+id/alarm_name"
-        app:item_name="闹钟名称"
-        app:item_value="起床闹钟"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"/>
-    <com.lenote.alarmstar.view.AlarmEditItemView_
-        android:id="@+id/realarm_interval"
-        app:item_name="贪睡时间"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"/>
-    <com.lenote.alarmstar.view.AlarmEditItemView_
-        android:id="@+id/alarm_ring"
-        app:item_name="响铃铃声"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"/>
-
-</LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:divider="@drawable/divide_line"
+        android:showDividers="middle"
+        android:layout_height="wrap_content">
+        <com.lenote.alarmstar.view.LogoActionBar_
+            android:id="@+id/actionBar"
+            app:title_name="闹钟设置"
+            app:menu_name="保存"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+        <com.lenote.alarmstar.view.TimeSelectWheel_
+            android:id="@+id/wheelView"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp"/>
+        <com.lenote.alarmstar.view.AlarmEditItemView_
+            android:id="@+id/alarm_type"
+            app:item_name="响铃周期"
+            app:item_value="每天"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+        <com.lenote.alarmstar.view.AlarmEditItemView_
+            app:item_name="响铃日期"
+            android:id="@+id/alarm_once_date"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+        <com.lenote.alarmstar.view.AlarmEditItemView_
+            android:id="@+id/alarm_name"
+            app:item_name="闹钟名称"
+            app:item_value="起床闹钟"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+        <com.lenote.alarmstar.view.AlarmEditItemView_
+            android:id="@+id/realarm_interval"
+            app:item_name="贪睡时间"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+        <com.lenote.alarmstar.view.AlarmEditItemView_
+            android:id="@+id/alarm_ring"
+            app:item_name="响铃铃声"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</ScrollView>

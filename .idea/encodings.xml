@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/lenote/alarmstar/tools/DebugLog.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/lenote/alarmstar/tools/ImageResizer.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/lenote/alarmstar/tools/LocalPreference.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/lenote/alarmstar/tools/SelectImageHelper.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/lenote/alarmstar/tools/StorageUtils.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/lenote/alarmstar/tools/tools.java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

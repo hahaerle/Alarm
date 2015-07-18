@@ -31,9 +31,10 @@ public class AlarmDao extends BaseDao {
     public static final String ALARM_NAME = "alarmName";
     public static final String IS_NOTIFY = "isNotify";
     public static final String REALARM_INTERVAL = "reAlarmInterval";  //
+    public static final String IS_OPEN = "is_open";  //
 
     private static final String[] COLUMNS = new String[]{
-            ID,ALARM_TIME, ALARM_TYPE, WEEKS, TYPE_NOCE_DATE, RING_URI, ALARM_NAME, IS_NOTIFY, REALARM_INTERVAL
+            ID,ALARM_TIME, ALARM_TYPE, WEEKS, TYPE_NOCE_DATE, RING_URI, ALARM_NAME, IS_NOTIFY, REALARM_INTERVAL,IS_OPEN
     };
 
     /**
@@ -51,6 +52,7 @@ public class AlarmDao extends BaseDao {
                 "  " + WEEKS + " VARCHAR(10) NULL ,\n" +
                 "  " + RING_URI + " VARCHAR(100) NULL ,\n" +
                 "  " + IS_NOTIFY + " INTEGER NULL  ,\n " +
+                "  " + IS_OPEN + " INTEGER NULL  ,\n " +
                 "  " + ALARM_NAME + " VARCHAR(20))";
         db.execSQL(sql);
     }
@@ -99,7 +101,7 @@ public class AlarmDao extends BaseDao {
         return array;
     }
 
-    public static List<AlarmSession> getAlarmList(Context context) {
+    public static List<AlarmObj> getAlarmList(Context context) {
         SQLiteDatabase db = DataBaseHelper.getReadableDatabase(context);
         compatibleBeginTransaction(db);
         db.setTransactionSuccessful();
@@ -115,6 +117,7 @@ public class AlarmDao extends BaseDao {
             alarmObj.setId(safeGetInteger(cursor, ID, 0));
             alarmObj.setAlarmName(safeGetString(cursor, ALARM_NAME, ""));
             alarmObj.setIsNotify(safeGetInteger(cursor, IS_NOTIFY, 1) == 1);
+            alarmObj.setIsOpen(safeGetInteger(cursor, IS_OPEN, 1) == 1);
             alarmObj.setOnceTypeDate(safeGetLong(cursor, TYPE_NOCE_DATE, 0));
             alarmObj.setReAlarmInterval(safeGetLong(cursor, REALARM_INTERVAL, 0));
             alarmObj.setRingUri(safeGetString(cursor, RING_URI, ""));
@@ -134,6 +137,7 @@ public class AlarmDao extends BaseDao {
             values.put(RING_URI, alarmObj.getRingUri());
             values.put(ALARM_NAME, alarmObj.getAlarmName());
             values.put(IS_NOTIFY, alarmObj.isNotify());
+            values.put(IS_OPEN, alarmObj.isOpen());
             values.put(REALARM_INTERVAL,alarmObj.getReAlarmInterval());
             values.put(ALARM_TIME,alarmObj.getAlarmTime());
             return values;

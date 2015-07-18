@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+    <style name="AppTheme" parent="android:Theme.Holo.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="android:windowAnimationStyle">@style/MyActivityAnimation</item>
     </style>
@@ -10,5 +10,8 @@
         <item name="android:activityCloseExitAnimation">@anim/activity_close_exit</item>
         <item name="android:activityOpenExitAnimation">@anim/activity_open_exit</item>
         <item name="android:activityCloseEnterAnimation">@anim/activity_close_enter</item>
+    </style>
+    <style name="FullScrennAndHidnStatus" parent="AppTheme">
+        <!-- translucent system bars -->
     </style>
 </resources>

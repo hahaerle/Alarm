@@ -13,7 +13,13 @@ public class AlarmObj {
     boolean isNotify;
     long reAlarmInterval;//如果没有关闭闹钟，reAlarmInterval毫秒后重新提醒。
     private long alarmTime;//起床闹钟和普通闹钟的响铃时间
-
+    private boolean isOpen;//是否打开的闹钟
+    public boolean isOpen(){
+        return isOpen;
+    }
+    public void setIsOpen(boolean value){
+        this.isOpen=value;
+    }
     public int getId() {
         return id;
     }

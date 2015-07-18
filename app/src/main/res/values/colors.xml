@@ -7,4 +7,8 @@
 
     <color name="text_color_lv1">#cc000000</color>
     <color name="text_color_lv2">#66000000</color>
+    <color name="create_menu_background">#efeff0</color>
+    <color name="alarm_item_backcolor">#4cffffff</color>
+    <color name="line_divide_69">#b0ffffff</color>
+    <color name="titlebar_background">#35ffffff</color>
 </resources>
